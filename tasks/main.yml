@@ -24,3 +24,8 @@
 
     - name: "Install cPanel"
       shell: sh latest
+    - name: Configure backup
+      copy:
+          src: config
+          dest: /var/cpanel/backups/config
+          mode: 0755
